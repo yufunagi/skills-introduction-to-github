@@ -14,49 +14,50 @@ _1時間以内にGitHubを使い始めましょう。_
 </header>
 
 <!--
-  <<< Author notes: Course start >>>
-  スタートボタン、Actionsの利用時間に関する注意、
-  そして、学習者がこのコースを受講する理由を伝えます。
+  <<< Author notes: Step 1 >>>
+  Choose 3-5 steps for your course.
+  The first step is always the hardest, so pick something easy!
+  Link to docs.github.com for further explanations.
+  Encourage users to open new tabs for steps!
 -->
 
-## ようこそ
+## ステップ 1: ブランチを作成する
 
-GitHubは、世界で最も高度なテクノロジーを構築するために利用されています。データの可視化や新しいゲームの構築など、GitHubにはコミュニティとツールが揃っており、より良い開発を支援します。GitHub Skillsの「GitHub入門」コースでは、貢献を始めるために必要なすべてを1時間以内に学ぶことができます。
+_「GitHub入門」へようこそ！ :wave:_
 
-- **対象者**: 新しい開発者、GitHubの新規ユーザー、学生。
-- **学習内容**: リポジトリ、ブランチ、コミット、プルリクエストを紹介します。
-- **作成するもの**: [プロファイルREADME](https://docs.github.com/ja/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme)として使用できる、短いMarkdownファイルを作成します。
-- **前提条件**: なし。このコースは、GitHubでの最初の一日に最適な入門編です。
-- **所要時間**: このコースは1時間以内に完了します。
+**GitHubとは？**: GitHubは、バージョニングに_[Git](https://docs.github.com/ja/get-started/learning-about-github/github-glossary#git)_を使用するコラボレーションプラットフォームです。GitHubは、[オープンソース](https://docs.github.com/ja/get-started/learning-about-github/github-glossary#open-source)ソフトウェアを共有し、貢献するための一般的な場所です。
+<br>:tv: [ビデオ: GitHubとは？](https://www.youtube.com/watch?v=pBy1zgt0XPc)
 
-このコースでは、以下を行います。
+**リポジトリとは？**: _[リポジトリ](https://docs.github.com/ja/get-started/learning-about-github/github-glossary#repository)_とは、ファイルとフォルダを含むプロジェクトです。リポジトリは、ファイルとフォルダのバージョンを追跡します。詳細については、GitHubドキュメントの「[リポジトリについて](https://docs.github.com/ja/repositories/creating-and-managing-repositories/about-repositories)」を参照してください。
 
-1. ブランチを作成する
-2. ファイルをコミットする
-3. プルリクエストを開く
-4. プルリクエストをマージする
+**ブランチとは？**: _[ブランチ](https://docs.github.com/ja/get-started/learning-about-github/github-glossary#branch)_とは、リポジトリの並行バージョンです。デフォルトでは、リポジトリには`main`という名前のブランチが1つあり、それが決定版のブランチと見なされます。追加のブランチを作成すると、リポジトリの`main`ブランチをコピーし、メインプロジェクトを中断することなく安全に変更を加えることができます。多くの人が、プロジェクトの他の部分に影響を与えることなく、特定の機能に取り組むためにブランチを使用します。
 
-### コースの開始方法
+ブランチを使用すると、作業を`main`ブランチから分離できます。つまり、貢献している間、誰もが安全に作業できます。詳細については、「[ブランチについて](https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)」を参照してください。
 
-<!-- コースを開始するためのJavaScriptの実行:
-'https://github.com/new?' + new URLSearchParams({
-  template_owner: 'skills',
-  template_name: 'introduction-to-github',
-  owner: '@me',
-  name: 'skills-introduction-to-github',
-  description: 'My clone repository',
-  visibility: 'public',
-}).toString()
--->
+**プロファイルREADMEとは？**: _[プロファイルREADME](https://docs.github.com/ja/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme)_は、GitHub.comで自分自身に関する情報をコミュニティと共有できる、GitHubプロフィールの「自己紹介」セクションです。GitHubは、プロフィールページの上部にプロフィールREADMEを表示します。詳細については、「[プロフィールREADMEの管理](https://docs.github.com/ja/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme)」を参照してください。
 
-[![start-course](https://user-images.githubusercontent.com/1221423/235727646-4a590299-ffe5-480d-8cd5-8194ea184546.svg)](https://github.com/new?template_owner=yufunagi&template_name=introduction-to-github-ver-ja&owner=%40me&name=skills-introduction-to-github&description=My+clone+repository&visibility=public)
+![profile-readme-example](/images/profile-readme-example.png)
 
-1. **Start course**を右クリックして、新しいタブでリンクを開きます。
-2. 新しいタブでは、ほとんどのプロンプトが自動的に入力されます。
-   - オーナーには、個人のアカウントまたはリポジトリをホストする組織を選択します。
-   - パブリックリポジトリを作成することをお勧めします。プライベートリポジトリは[Actionsの利用時間](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions)を消費するためです。
-   - スクロールダウンして、フォームの下部にある**Create repository**ボタンをクリックします。
-3. 新しいリポジトリが作成されたら、約20秒待ってからページを更新します。新しいリポジトリのREADMEにあるステップバイステップの手順に従ってください。
+### :keyboard: アクティビティ: 初めてのブランチ
+
+1. 新しいブラウザータブを開き、新しく作成したリポジトリに移動します。次に、このタブの手順を読みながら、2番目のタブで手順を実行します。
+2. リポジトリのヘッダーメニューにある**< > Code**タブに移動します。
+
+   ![code-tab](/images/code-tab.png)
+
+3. **main**ブランチのドロップダウンをクリックします。
+
+   ![main-branch-dropdown](/images/main-branch-dropdown.png)
+
+4. フィールドに、ブランチに`my-first-branch`という名前を付けます。この場合、コースのワークフローをトリガーするには、名前が`my-first-branch`である必要があります。
+5. **ブランチを作成: my-first-branch**をクリックして、ブランチを作成します。
+
+   ![create-branch-button](/images/create-branch-button.png)
+
+   ブランチは、作成したブランチに自動的に切り替わります。
+   **main**ブランチのドロップダウンバーには、新しいブランチが反映され、新しいブランチ名が表示されます。
+
+6. 約20秒待ってから、このページ（手順に従っているページ）を更新します。[GitHub Actions](https://docs.github.com/ja/actions)が自動的に次のステップに更新されます。
 
 <footer>
 
