@@ -14,36 +14,39 @@ _1時間以内にGitHubを使い始めましょう。_
 </header>
 
 <!--
-  <<< Author notes: Step 4 >>>
-  Just a historic note: The previous version of this step required responding
-  to a pull request review before merging. The previous version also handled
-  if users accidentally closed without merging.
+  <<< Author notes: Finish >>>
+  学んだことのレビュー、フィードバックの依頼、次のステップの提供。
 -->
 
-## ステップ4：プルリクエストをマージする
+## 完了
 
-_よくできました！ :sunglasses:_
+_おめでとうございます。このコースを完了し、開発者の世界へ仲間入りしました！_
 
-プルリクエストが正常に作成されました。 これで、プルリクエストをマージできます。
+<img src=https://octodex.github.com/images/collabocats.jpg alt=お祝い width=300 align=right>
 
-**マージとは？**：_[マージ](https://docs.github.com/ja/get-started/quickstart/github-glossary#merge)_は、プルリクエストとブランチの変更を`main`ブランチに追加します。 マージの詳細については、「[プルリクエストのマージ](https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request)」を参照してください。
+これまでの成果をまとめます。
 
-前のステップで述べたように、GitHub Actionsが実行されているのを確認できたかもしれません。これは、指示を次のステップに自動的に進めます。 プルリクエストをマージする前に、それが完了するのを待つ必要があります。 プルリクエストのマージボタンが緑色になったら準備完了です。
+- GitHub、リポジトリ、ブランチ、コミット、プルリクエストについて学びました。
+- ブランチ、コミット、プルリクエストを作成しました。
+- プルリクエストをマージしました。
+- 初めての貢献をしました！ :tada:
 
-![緑色のプルリクエストのマージボタンのスクリーンショット](/images/Green-merge-pull-request.png)
+### 次は何をしますか？
 
-### :keyboard: アクティビティ：プルリクエストをマージする
+プロフィールのREADMEを作成したい場合は、以下のクイックスタートの手順を使用するか、[プロフィールのREADMEの管理](https://docs.github.com/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme)の記事の手順に従ってください。
 
-1. **プルリクエストのマージ**をクリックします。
-2. **マージの確認**をクリックします。
-3. ブランチがマージされたら、もう必要ありません。 このブランチを削除するには、**ブランチの削除**をクリックします。
+1. GitHubのユーザー名と一致する名前で、新しいパブリックリポジトリを作成します。
+2. ルートに`README.md`という名前のファイルを作成します。「ルート」とは、リポジトリ内のどのフォルダーにも含まれていないことを意味します。
+3. `README.md`ファイルの内容を編集します。
+4. ファイル用に新しいブランチを作成した場合は、ブランチでプルリクエストを開いてマージします。
+5. 最後に、このコースについてのご意見を[ディスカッションボード](https://github.com/orgs/skills/discussions/categories/introduction-to-github)でお聞かせください。
 
-   ![ブランチの削除ボタンを示すスクリーンショット](/images/delete-branch.png)
+詳細を学ぶか、参加するには、次のリソースを確認してください。
 
-4. 約20秒待ってから、このページ（指示に従っているページ）を更新します。 [GitHub Actions](https://docs.github.com/ja/actions)が自動的に次のステップに更新されます。
-
-> [!NOTE]
-> 次に何を学べるかを確認するには、**完了**ステップをチェックしてください！
+- 学生ですか？ [Student Developer Pack](https://education.github.com/pack)をご覧ください。
+- [別のGitHub Skillsコースを受講する](https://github.com/skills)。
+- [GitHubのスタートガイドのドキュメントを読む](https://docs.github.com/ja/get-started)。
+- 貢献するプロジェクトを見つけるには、[GitHub Explore](https://github.com/explore)をチェックしてください。
 
 <footer>
 
