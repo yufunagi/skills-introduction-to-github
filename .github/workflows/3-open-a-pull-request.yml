@@ -1,0 +1,68 @@
+name: ステップ 3, プルリクエストを開く
+
+# このステップは、学習者が `my-first-branch` ブランチでプルリクエストを開くのを待ちます。
+# このワークフローは、ステップ 3 からステップ 4 に更新されます。
+
+# これは、ブランチまたはタグを作成するたびに実行されます。
+# 参考: https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows
+on:
+  workflow_dispatch:
+  pull_request:
+    types:
+      - opened
+      - reopened
+
+# 参考: https://docs.github.com/en/actions/security-guides/automatic-token-authentication
+permissions:
+  # リポジトリをチェックアウトするには `contents: read` が必要です。
+  # ステップのメタデータを更新するには `contents: write` が必要です。
+  contents: write
+
+jobs:
+  # 現在のステップを取得して、学習者が同じステップにいる場合にのみメインジョブを実行します。
+  get_current_step:
+    name: 現在のステップ番号を確認
+    runs-on: ubuntu-latest
+    steps:
+      - name: チェックアウト
+        uses: actions/checkout@v4
+      - id: get_step
+        run: |
+          echo "current_step=$(cat ./.github/steps/-step.txt)" >> $GITHUB_OUTPUT
+    outputs:
+      current_step: ${{ steps.get_step.outputs.current_step }}
+
+  on_open_a_pull_request:
+    name: プルリクエストを開くとき
+    needs: get_current_step
+
+    # このアクションは、以下の場合にのみ実行されます。
+    # 1. このリポジトリがテンプレートリポジトリではない。
+    # 2. 現在のステップが 3 である。
+    # 3. ヘッドブランチ名が `my-first-branch` である。
+    # 参考: https://docs.github.com/en/actions/learn-github-actions/contexts
+    # 参考: https://docs.github.com/en/actions/learn-github-actions/expressions
+    if: >-
+      ${{ !github.event.repository.is_template
+          && needs.get_current_step.outputs.current_step == 3
+          && github.head_ref == 'my-first-branch' }}
+
+    # Mac または Windows ではなく、パフォーマンスのために Ubuntu を実行します。
+    runs-on: ubuntu-latest
+
+    steps:
+      # README を編集できるように、リポジトリをチェックアウトする必要があります。
+      - name: チェックアウト
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # すべてのブランチを取得しましょう。
+          ref: my-first-branch # 通常、`pull_request` イベントは他のブランチを取得しないため、重要です。
+
+      # README.md で、ステップ 3 をステップ 4 に切り替えます。
+      - name: ステップ 4 に更新
+        uses: skills/action-update-step@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          from_step: 3
+          to_step: 4
+          branch_name: my-first-branch

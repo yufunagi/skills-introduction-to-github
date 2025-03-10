@@ -1,0 +1,64 @@
+name: Step 4, プルリクエストをマージ
+
+# このステップは、学習者が`my-first-branch`ブランチにプルリクエストをマージするのを待ちます。
+# このワークフローは、ステップ4からステップXに更新します。
+
+# これは、`main`にコミットをプッシュするたびに実行されます。
+# 参照：https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+# 参照：https://docs.github.com/en/actions/security-guides/automatic-token-authentication
+permissions:
+  # リポジトリをチェックアウトするには`contents: read`が必要です。
+  # ステップのメタデータを更新するには`contents: write`が必要です。
+  contents: write
+
+jobs:
+  # 現在のステップを取得して、学習者が同じステップにいる場合にのみメインジョブを実行します。
+  get_current_step:
+    name: 現在のステップ番号を確認
+    runs-on: ubuntu-latest
+    steps:
+      - name: チェックアウト
+        uses: actions/checkout@v4
+      - id: get_step
+        run: |
+          echo "current_step=$(cat ./.github/steps/-step.txt)" >> $GITHUB_OUTPUT
+    outputs:
+      current_step: ${{ steps.get_step.outputs.current_step }}
+
+  on_merge_your_pull_request:
+    name: プルリクエストのマージ時
+    needs: get_current_step
+
+    # このアクションは以下の場合にのみ実行されます。
+    # 1. このリポジトリがテンプレートリポジトリではない。
+    # 2. 現在のステップが4である。
+    # 参照：https://docs.github.com/en/actions/learn-github-actions/contexts
+    # 参照：https://docs.github.com/en/actions/learn-github-actions/expressions
+    if: >-
+      ${{ !github.event.repository.is_template
+          && needs.get_current_step.outputs.current_step == 4 }}
+
+    # MacまたはWindowsの代わりに、パフォーマンスのためにUbuntuを実行します。
+    runs-on: ubuntu-latest
+
+    steps:
+      # READMEを編集できるように、リポジトリをチェックアウトする必要があります。
+      - name: チェックアウト
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # すべてのブランチを取得しましょう。
+
+      # README.mdで、ステップ4をステップXに切り替えます。
+      - name: ステップXに更新
+        uses: skills/action-update-step@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          from_step: 4
+          to_step: X
+          branch_name: my-first-branch
