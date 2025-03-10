@@ -14,48 +14,49 @@ _1時間以内にGitHubを使い始めましょう。_
 </header>
 
 <!--
-  <<< Author notes: Step 2 >>>
-  Start this step by acknowledging the previous step.
-  Define terms and link to docs.github.com.
+  <<< Author notes: Step 3 >>>
+  Just a historic note: the previous version of this step forced the learner
+  to write a pull request description,
+  checked that `main` was the receiving branch,
+  and that the file was named correctly.
 -->
 
-## ステップ 2: ファイルをコミットする
+## ステップ 3: プルリクエストを開く
 
-_ブランチを作成しました！ :tada:_
+_コミットお疲れ様でした！ :sparkles:_
 
-ブランチを作成すると、`main`ブランチを変更せずにプロジェクトを編集できます。 ブランチができたので、ファイルを作成して最初のコミットを行いましょう！
+プロジェクトに変更を加え、コミットを作成したので、プルリクエストを通じて提案された変更を共有する時が来ました。
 
-**コミットとは？**: _[コミット](https://docs.github.com/ja/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits)_とは、プロジェクト内のファイルとフォルダーに対する一連の変更のことです。 コミットはブランチに存在します。 詳細については、「[コミットについて](https://docs.github.com/ja/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits)」を参照してください。
+**プルリクエストとは？**: コラボレーションは_[プルリクエスト](https://docs.github.com/ja/get-started/quickstart/github-glossary#pull-request)_で行われます。プルリクエストは、ブランチの変更を他の人に示し、他の人がブランチに対する追加の変更を受け入れたり、拒否したり、提案したりできるようにします。左右の比較では、このプルリクエストは、ブランチで行った変更を保持し、それらを`main`プロジェクトブランチに適用することを提案します。プルリクエストの詳細については、「[プルリクエストについて](https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)」を参照してください。
 
-### :keyboard: アクティビティ: 初めてのコミット
+### :keyboard: アクティビティ: プルリクエストを作成する
 
-以下の手順では、GitHub で変更をコミットするプロセスを説明します。 コミットは、名前の変更、コンテンツの変更、新しいファイルの作成、およびプロジェクトに加えられたその他の変更を記録します。 この演習では、変更をコミットするには、まず新しいファイルを新しいブランチに追加する必要があります。
+コミット後、ブランチへの最近のプッシュを示すメッセージと、**Compare & pull request**というボタンが表示されていることに気付いたかもしれません。
+
+![screenshot of message and button](/images/compare-and-pull-request.png)
+
+プルリクエストを自動的に作成するには、**Compare & pull request**をクリックし、以下のステップ6に進みます。ボタンをクリックしない場合は、以下の手順に従ってプルリクエストを手動で設定します。
+
+1. リポジトリのヘッダーメニューにある**Pull requests**タブをクリックします。
+2. **New pull request**をクリックします。
+3. **base:**ドロップダウンで、**main**が選択されていることを確認します。
+4. **compare:**ドロップダウンを選択し、`my-first-branch`をクリックします。
+
+   ![screenshot showing both branch selections](/images/pull-request-branches.png)
+
+5. **Create pull request**をクリックします。
+6. プルリクエストのタイトルを入力します。デフォルトでは、タイトルは自動的にブランチの名前になります。この演習では、フィールドを編集して`Add my first file`と表示します。
+7. 次のフィールドでは、行った変更の説明を入力できます。ここでは、これまでに達成したことの説明を追加できます。念のため、新しいブランチを作成し、ファイルを作成し、コミットしました。
+
+   ![screenshot showing pull request](/images/Pull-request-description.png)
+
+8. **Create pull request**をクリックします。新しいプルリクエストに自動的に移動します。
+9. 約20秒待ってから、このページ（手順に従っているページ）を更新します。[GitHub Actions](https://docs.github.com/ja/actions)が自動的に次のステップに更新されます。
 
 > [!NOTE]
-> `.md` は、Markdown ファイルを作成するファイル拡張子です。 Markdown の詳細については、ドキュメントの「[基本的な書き方とフォーマットの構文](https://docs.github.com/ja/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)」または「[Markdown を使用したコミュニケーション](https://github.com/skills/communicate-using-markdown)」スキルコースをご覧ください。
-
-1. リポジトリのヘッダーメニューにある **< > Code** タブで、新しいブランチ `my-first-branch` にいることを確認します。
-
-2. **ファイルの追加** ドロップダウンを選択し、**新しいファイルを作成** をクリックします。
-
-   ![create new file option](/images/create-new-file.png)
-
-3. **ファイルに名前を付けてください...** フィールドに、`PROFILE.md` と入力します。
-
-4. **ここにファイルの内容を入力してください** 領域に、次のコンテンツをファイルにコピーします。
-
-   ```
-   GitHub プロフィールへようこそ！
-   ```
-
-   ![profile.md file screenshot](/images/my-profile-file.png)
-
-5. コンテンツボックスの右上隅にある **変更をコミット...** をクリックします。 コミットでは、変更内容を説明する短いコミットメッセージを入力できます。 このメッセージは、他の人がコミットに含まれている内容を知るのに役立ちます。 GitHub はシンプルなデフォルトメッセージを提供しますが、練習のために少し変更してみましょう。 まず、「コミットメッセージ」というタイトルの最初のテキスト入力フィールドに `Add PROFILE.md` と入力します。
-
-   ![screenshot of adding a new file with a commit message](/images/commit-full-screen.png)
-
-6. このレッスンでは、他のフィールドは無視して **変更をコミット** をクリックします。
-7. 約 20 秒待ってから、このページ (手順に従っているページ) を更新します。 [GitHub Actions](https://docs.github.com/ja/actions) が自動的に次のステップに更新されます。
+> プルリクエストが開いているタブでGitHub Actionsが実行されている証拠が表示される場合があります。下の画像は、Actionの実行が終了した後、プルリクエストに表示される可能性のある行を示しています。
+> 
+> ![screenshot of an example of an actions line](/images/Actions-to-step-4.png)
 
 <footer>
 
