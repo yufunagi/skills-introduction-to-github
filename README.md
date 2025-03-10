@@ -14,50 +14,48 @@ _1時間以内にGitHubを使い始めましょう。_
 </header>
 
 <!--
-  <<< Author notes: Step 1 >>>
-  Choose 3-5 steps for your course.
-  The first step is always the hardest, so pick something easy!
-  Link to docs.github.com for further explanations.
-  Encourage users to open new tabs for steps!
+  <<< Author notes: Step 2 >>>
+  Start this step by acknowledging the previous step.
+  Define terms and link to docs.github.com.
 -->
 
-## ステップ 1: ブランチを作成する
+## ステップ 2: ファイルをコミットする
 
-_「GitHub入門」へようこそ！ :wave:_
+_ブランチを作成しました！ :tada:_
 
-**GitHubとは？**: GitHubは、バージョニングに_[Git](https://docs.github.com/ja/get-started/learning-about-github/github-glossary#git)_を使用するコラボレーションプラットフォームです。GitHubは、[オープンソース](https://docs.github.com/ja/get-started/learning-about-github/github-glossary#open-source)ソフトウェアを共有し、貢献するための一般的な場所です。
-<br>:tv: [ビデオ: GitHubとは？](https://www.youtube.com/watch?v=pBy1zgt0XPc)
+ブランチを作成すると、`main`ブランチを変更せずにプロジェクトを編集できます。 ブランチができたので、ファイルを作成して最初のコミットを行いましょう！
 
-**リポジトリとは？**: _[リポジトリ](https://docs.github.com/ja/get-started/learning-about-github/github-glossary#repository)_とは、ファイルとフォルダを含むプロジェクトです。リポジトリは、ファイルとフォルダのバージョンを追跡します。詳細については、GitHubドキュメントの「[リポジトリについて](https://docs.github.com/ja/repositories/creating-and-managing-repositories/about-repositories)」を参照してください。
+**コミットとは？**: _[コミット](https://docs.github.com/ja/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits)_とは、プロジェクト内のファイルとフォルダーに対する一連の変更のことです。 コミットはブランチに存在します。 詳細については、「[コミットについて](https://docs.github.com/ja/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits)」を参照してください。
 
-**ブランチとは？**: _[ブランチ](https://docs.github.com/ja/get-started/learning-about-github/github-glossary#branch)_とは、リポジトリの並行バージョンです。デフォルトでは、リポジトリには`main`という名前のブランチが1つあり、それが決定版のブランチと見なされます。追加のブランチを作成すると、リポジトリの`main`ブランチをコピーし、メインプロジェクトを中断することなく安全に変更を加えることができます。多くの人が、プロジェクトの他の部分に影響を与えることなく、特定の機能に取り組むためにブランチを使用します。
+### :keyboard: アクティビティ: 初めてのコミット
 
-ブランチを使用すると、作業を`main`ブランチから分離できます。つまり、貢献している間、誰もが安全に作業できます。詳細については、「[ブランチについて](https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)」を参照してください。
+以下の手順では、GitHub で変更をコミットするプロセスを説明します。 コミットは、名前の変更、コンテンツの変更、新しいファイルの作成、およびプロジェクトに加えられたその他の変更を記録します。 この演習では、変更をコミットするには、まず新しいファイルを新しいブランチに追加する必要があります。
 
-**プロファイルREADMEとは？**: _[プロファイルREADME](https://docs.github.com/ja/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme)_は、GitHub.comで自分自身に関する情報をコミュニティと共有できる、GitHubプロフィールの「自己紹介」セクションです。GitHubは、プロフィールページの上部にプロフィールREADMEを表示します。詳細については、「[プロフィールREADMEの管理](https://docs.github.com/ja/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme)」を参照してください。
+> [!NOTE]
+> `.md` は、Markdown ファイルを作成するファイル拡張子です。 Markdown の詳細については、ドキュメントの「[基本的な書き方とフォーマットの構文](https://docs.github.com/ja/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)」または「[Markdown を使用したコミュニケーション](https://github.com/skills/communicate-using-markdown)」スキルコースをご覧ください。
 
-![profile-readme-example](/images/profile-readme-example.png)
+1. リポジトリのヘッダーメニューにある **< > Code** タブで、新しいブランチ `my-first-branch` にいることを確認します。
 
-### :keyboard: アクティビティ: 初めてのブランチ
+2. **ファイルの追加** ドロップダウンを選択し、**新しいファイルを作成** をクリックします。
 
-1. 新しいブラウザータブを開き、新しく作成したリポジトリに移動します。次に、このタブの手順を読みながら、2番目のタブで手順を実行します。
-2. リポジトリのヘッダーメニューにある**< > Code**タブに移動します。
+   ![create new file option](/images/create-new-file.png)
 
-   ![code-tab](/images/code-tab.png)
+3. **ファイルに名前を付けてください...** フィールドに、`PROFILE.md` と入力します。
 
-3. **main**ブランチのドロップダウンをクリックします。
+4. **ここにファイルの内容を入力してください** 領域に、次のコンテンツをファイルにコピーします。
 
-   ![main-branch-dropdown](/images/main-branch-dropdown.png)
+   ```
+   GitHub プロフィールへようこそ！
+   ```
 
-4. フィールドに、ブランチに`my-first-branch`という名前を付けます。この場合、コースのワークフローをトリガーするには、名前が`my-first-branch`である必要があります。
-5. **ブランチを作成: my-first-branch**をクリックして、ブランチを作成します。
+   ![profile.md file screenshot](/images/my-profile-file.png)
 
-   ![create-branch-button](/images/create-branch-button.png)
+5. コンテンツボックスの右上隅にある **変更をコミット...** をクリックします。 コミットでは、変更内容を説明する短いコミットメッセージを入力できます。 このメッセージは、他の人がコミットに含まれている内容を知るのに役立ちます。 GitHub はシンプルなデフォルトメッセージを提供しますが、練習のために少し変更してみましょう。 まず、「コミットメッセージ」というタイトルの最初のテキスト入力フィールドに `Add PROFILE.md` と入力します。
 
-   ブランチは、作成したブランチに自動的に切り替わります。
-   **main**ブランチのドロップダウンバーには、新しいブランチが反映され、新しいブランチ名が表示されます。
+   ![screenshot of adding a new file with a commit message](/images/commit-full-screen.png)
 
-6. 約20秒待ってから、このページ（手順に従っているページ）を更新します。[GitHub Actions](https://docs.github.com/ja/actions)が自動的に次のステップに更新されます。
+6. このレッスンでは、他のフィールドは無視して **変更をコミット** をクリックします。
+7. 約 20 秒待ってから、このページ (手順に従っているページ) を更新します。 [GitHub Actions](https://docs.github.com/ja/actions) が自動的に次のステップに更新されます。
 
 <footer>
 
